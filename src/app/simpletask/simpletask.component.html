@@ -1,0 +1,30 @@
+
+<p>**********************************************</p>
+<h1>simpletask works!</h1>
+<p>**********************************************</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <input type="text" [(ngModel)]="search">
+    </div>
+    <div class="col-6">
+      <select [(ngModel)]="activeBox" name="" id="">
+        <option  value="">Select Value</option>
+        <option value="1">First Box</option>
+        <option value="2">Second Box</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 box1" [ngClass]="{'active' : activeBox == '1'}">
+      {{ search }}
+    </div>
+    <div class="col-6 box2" [class.active] = "activeBox == '2'">
+      {{ search }}
+    </div>
+  </div>
+
+</div>
+
+
